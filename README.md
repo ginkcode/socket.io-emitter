@@ -31,4 +31,4 @@ func Test() {
 
 - `emitter` use its own Rooms to combine and pack the message before emitting and then reset it.
 Let's create new instance or check mutex lock to avoid race condition.
-- Can reuse redis connection by passing `redis.Client` or `redis.ClusterClient` by `NewWrapper()` or `NewWrapperWithCluster()`
+- Can reuse redis connection by passing `redis.Client` or `redis.ClusterClient` to `NewWrapper()` or `NewWrapperWithCluster()`
