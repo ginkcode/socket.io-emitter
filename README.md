@@ -1,6 +1,6 @@
 ## Socket.io Emitter
 
-Library supporting send message from non-socket.io process via redis. (Mostly configured by socket.io and socket.io-redis in NodeJs)
+Library supports sending message from non-socket.io process via redis. (Mostly configured by socket.io and socket.io-redis in NodeJs)
 
 ### Example
 `go get -u github.com/ginkcode/socket.io-emitter`
@@ -11,7 +11,7 @@ import "github.com/go-redis/redis/v7"
 
 func Test() {
     opts := &redis.Options{Addr: "localhost:6379"}
-    rdWrapper, err := NewWrapperWithOptions(opts)
+    rdWrapper, err := ioemitter.NewWrapperWithOptions(opts)
     if err != nil {
         panic("Can't create Redis wrapper")
     }
