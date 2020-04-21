@@ -15,7 +15,7 @@ func Test() {
     if err != nil {
         panic("Can't create Redis wrapper")
     }
-    emitter := NewEmitter("prefix", "/namespace", rdWrapper)
+    emitter := ioemitter.NewEmitter("prefix", "/namespace", rdWrapper)
     if err := emitter.To("chat").Emit("Hello world"); err != nil {
         panic("Can't send message to chat room")
     }
